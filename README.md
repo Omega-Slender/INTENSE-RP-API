@@ -1,2 +1,2 @@
-# intense_rp_api
+# INTENSE RP API
 API to connect SillyTavern with POE.
