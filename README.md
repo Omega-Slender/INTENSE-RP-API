@@ -2,6 +2,7 @@
 ### API to Connect SillyTavern with POE
 
 **Tutorial:** [Intense RP API Tutorial](https://docs.google.com/presentation/d/1tp7T8GxWjt3EFIozbzdLfdIK6FP942iu76VCNJj_L7U/edit?usp=sharing)
+**Code based on the work of 4e4f4148:** [ITSNOTPOEVER-ST](https://github.com/4e4f4148/ITSNOTPOEVER-ST)
 
 ---
 
