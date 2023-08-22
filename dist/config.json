@@ -1,4 +1,5 @@
 {
     "browser": "edge",
-    "cookie": "Your cookie code."
+    "cookie": "Your cookie code.",
+    "reset_context": true
 }

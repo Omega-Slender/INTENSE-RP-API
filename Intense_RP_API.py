@@ -1,4 +1,4 @@
-# Librerias.
+# Librerías.
 from flask import Flask, request, jsonify
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -15,11 +15,12 @@ import sys
 import re
 import os
 
-# Si no existe Json lo crea.
+# Si no existe el archivo Json, se crea.
 if not os.path.exists("config.json"):
     default_config = {
         "browser": "edge",
-        "cookie": "Your cookie code."
+        "cookie": "Your cookie code.",
+        "reset_context": True
     }
     with open("config.json", "w") as config_file:
         json.dump(default_config, config_file, indent=4)
@@ -29,6 +30,7 @@ with open("config.json") as config_file:
     config = json.load(config_file)
     browser = config["browser"]
     cookie = config["cookie"]
+    reset_context = config["reset_context"]
 
 # Verificar si el navegador es compatible, sino, mostrar mensaje y cerrar la consola.
 if browser.lower() not in ["edge", "firefox", "chrome"]:
@@ -163,72 +165,106 @@ def sagedriver_completion():
         formatted_messages.append(f"{role}: {content}")
 
     # Agregar saltos de linea en el contenido.
-    formatted_output = "\n\n".join(formatted_messages)
+    Character_Info = "\n\n".join(formatted_messages)
     
     # Quitar todo los "system:" del contenido.
-    formatted_output = formatted_output.replace("system: ", "")
+    Character_Info = Character_Info.replace("system: ", "")
+    
+    # Eliminar nombres duplicados.
+    regex = re.compile(r"(\w+): (\w+): ") 
+    Character_Info = regex.sub(r"\1: ", Character_Info)
     
     # Detectar "DATA" y agregarlos en una variable.
-    character_match = re.search(r'DATA1: "([^"]*)"', formatted_output)
+    character_match = re.search(r'DATA1: "([^"]*)"', Character_Info)
     if character_match:
         characterName = character_match.group(1)
     else:
         characterName = 'Character:'
     
-    user_match = re.search(r'DATA2: "([^"]*)"', formatted_output)
+    user_match = re.search(r'DATA2: "([^"]*)"', Character_Info)
     if user_match:
         userName = user_match.group(1)
     else:
         userName = 'User:'
 
     # Reemplazar "assistant" y  "user" por unas variables.
-    formatted_output = formatted_output.replace("assistant:", characterName)
-    formatted_output = formatted_output.replace("user:", userName)
+    Character_Info = Character_Info.replace("assistant:", characterName)
+    Character_Info = Character_Info.replace("user:", userName)
+    
+    # Dividir el contenido en dos partes
+    split_content = re.split(r'(\[Start a new chat\])', Character_Info, maxsplit=1)
+    Character_Info1 = split_content[0].strip()
+    Character_Info2 = split_content[1] + '\n' + split_content[2].strip()
+    print("\n- " + Fore.MAGENTA + Style.BRIGHT + "Information extracted.")
 
     # Presionar botón para reiniciar contexto.
-    try:
-        reset = driver.find_element(By.CLASS_NAME, "ChatMessageInputFooter_chatBreakButton__hqJ3v")
-        reset.click()
-    except NoSuchElementException:
-        pass
+    if reset_context:
+        try:
+            reset = driver.find_element(By.CLASS_NAME, "ChatMessageInputFooter_chatBreakButton__hqJ3v")
+            reset.click()
+            print("- " + Fore.YELLOW + Style.BRIGHT + "Context cleaned.")
+        except NoSuchElementException:
+            pass
     
     # Avisar que el proceso terminó.
-    print("\n- " + Fore.YELLOW + Style.BRIGHT + "Information extracted.")
     time.sleep(0.1)
     
-    # Agregar caja de texto en una variable.
     try:
+        # Agregar caja de texto en una variable.
         text_area = driver.find_element(By.CLASS_NAME, "GrowingTextArea_textArea__eadlu")
-
+        
         # Ejecutar script para pegar la infomación.
-        driver.execute_script("arguments[0].value = arguments[1];", text_area, formatted_output)
-        text_area.send_keys(" ")
+        driver.execute_script("arguments[0].value = arguments[1];", text_area, Character_Info1)
+        text_area.send_keys("\n\n[If you accept the requirements, please confirm by responding with \"Understood.\" and nothing more. Once I receive your precise confirmation message, I will specify the context of the scene, as well as the characteristics, background, and personality of your character in the following message.]")
         
     except NoSuchElementException:
+        # Lanzar error cuando no se cuentre la caja de texto.
         print("- " + Fore.RED + Style.BRIGHT + "The information could not be pasted.")
         return "Text box not found"
 
-    # Presionar ENTER para enviar información y avisar en la consola.
+    # Presionar ENTER para enviar "Character_Info1" y avisar en la consola.
     text_area.send_keys(Keys.RETURN)
-    print("- " + Fore.GREEN + Style.BRIGHT + "Message sent.")
-    print("- " + Fore.RED + Style.BRIGHT + "Awaiting response.")
+    print("- " + Fore.GREEN + Style.BRIGHT + "Message one sent.")
+    print("- " + Fore.YELLOW + Style.BRIGHT + "Awaiting response.")
+    
+    # Esperar 2 segundos para poder enviar el contenido de "Character_Info2".
+    time.sleep(2)
+    text_area = driver.find_element(By.CLASS_NAME, "GrowingTextArea_textArea__eadlu")
+    driver.execute_script("arguments[0].value = arguments[1];", text_area, Character_Info2)
+    text_area.send_keys(" ")
+    
+    # Revisar en bucle si el botón de enviar está disponible.
+    while True:
+        try:
+            send_button = driver.find_element(By.CLASS_NAME, "ChatMessageSendButton_sendButton__OMyK1")
+            if send_button.get_attribute("disabled") == "true":   
+                time.sleep(0.2) 
+            else:
+                break 
+        except NoSuchElementException:
+            break
+
+    # Presionar otra vez ENTER para enviar "Character_Info2" y avisar en la consola.
+    text_area.send_keys(Keys.RETURN)
+    print("- " + Fore.GREEN + Style.BRIGHT + "Message two sent.")
+    print("- " + Fore.YELLOW + Style.BRIGHT + "Awaiting response.")
+    
+    # Esperar 2 segundos para poder enviar el texto.
     time.sleep(2.5)
     text_area = driver.find_element(By.CLASS_NAME, "GrowingTextArea_textArea__eadlu")
     driver.execute_script("arguments[0].value = arguments[1];", text_area, "Message to continue")
     text_area.send_keys(".")
     
-    # Buscar en bucle si el botón de "espera" no existe.
+    # Revisar en bucle si el botón de enviar está disponible.
     while True:
         try:
             send_button = driver.find_element(By.CLASS_NAME, "ChatMessageSendButton_sendButton__OMyK1")
             if send_button.get_attribute("disabled") == "true":   
-                time.sleep(0.2)  # Espera antes de volver a verificar
+                time.sleep(0.2) 
             else:
-                break  # Salir del bucle si el botón ya no está desactivado
+                break 
         except NoSuchElementException:
-            break  # Salir del bucle si no se encuentra el botón
-
-    print("- " + Fore.GREEN + Style.BRIGHT + "The response is ready.")
+            break
 
     # Obtener el contenido de la última respuesta.
     div = driver.find_elements(By.CSS_SELECTOR, "div.Markdown_markdownContainer__UyYrv")[-1]
@@ -273,7 +309,7 @@ def sagedriver_completion():
             "total_tokens": 799
         }
     }
-    print("- " + Fore.CYAN + Style.BRIGHT + "Response sent.")
+    print("- " + Fore.BLUE + Style.BRIGHT + "Response sent.")
     return jsonify(response_data)
     
 @app.route('/api/completions', methods=['GET'])
@@ -298,14 +334,15 @@ if __name__ == '__main__':
     local_ip = socket.gethostbyname(socket.gethostname())
     time.sleep(0.2)
     
-    print(Fore.CYAN + Style.BRIGHT + "WELCOME TO INTENSE RP API")
+    print(Fore.CYAN + Style.BRIGHT + "WELCOME TO INTENSE RP API V1.1")
     time.sleep(0.2)
-    
+
     print(Fore.GREEN + Style.BRIGHT + "Links to connect SillyTavern with the API:")
     time.sleep(0.2)
     
     print(Fore.YELLOW + Style.BRIGHT + f"URL 1: {Fore.WHITE}http://127.0.0.1:5000/v2/driver/sage")
     time.sleep(0.2)
+    
     print(Fore.YELLOW + Style.BRIGHT + f"URL 2: {Fore.WHITE}http://{local_ip}:5000/v2/driver/sage")  
     time.sleep(0.2)
     app.run(host='0.0.0.0', port=5000)
