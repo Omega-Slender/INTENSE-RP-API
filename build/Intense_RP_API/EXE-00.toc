@@ -1,4 +1,4 @@
-('D:\\Intense_RP_API_v1.1\\dist\\Intense_RP_API.exe',
+('D:\\Intense_RP_API_v1.2\\dist\\Intense_RP_API.exe',
  True,
  False,
  False,
@@ -14,24 +14,24 @@
  None,
  None,
  None,
- 'D:\\Intense_RP_API_v1.1\\build\\Intense_RP_API\\Intense_RP_API.pkg',
+ 'D:\\Intense_RP_API_v1.2\\build\\Intense_RP_API\\Intense_RP_API.pkg',
  [('PYZ-00.pyz',
-   'D:\\Intense_RP_API_v1.1\\build\\Intense_RP_API\\PYZ-00.pyz',
+   'D:\\Intense_RP_API_v1.2\\build\\Intense_RP_API\\PYZ-00.pyz',
    'PYZ'),
   ('struct',
-   'D:\\Intense_RP_API_v1.1\\build\\Intense_RP_API\\localpycs\\struct.pyc',
+   'D:\\Intense_RP_API_v1.2\\build\\Intense_RP_API\\localpycs\\struct.pyc',
    'PYMODULE'),
   ('pyimod01_archive',
-   'D:\\Intense_RP_API_v1.1\\build\\Intense_RP_API\\localpycs\\pyimod01_archive.pyc',
+   'D:\\Intense_RP_API_v1.2\\build\\Intense_RP_API\\localpycs\\pyimod01_archive.pyc',
    'PYMODULE'),
   ('pyimod02_importers',
-   'D:\\Intense_RP_API_v1.1\\build\\Intense_RP_API\\localpycs\\pyimod02_importers.pyc',
+   'D:\\Intense_RP_API_v1.2\\build\\Intense_RP_API\\localpycs\\pyimod02_importers.pyc',
    'PYMODULE'),
   ('pyimod03_ctypes',
-   'D:\\Intense_RP_API_v1.1\\build\\Intense_RP_API\\localpycs\\pyimod03_ctypes.pyc',
+   'D:\\Intense_RP_API_v1.2\\build\\Intense_RP_API\\localpycs\\pyimod03_ctypes.pyc',
    'PYMODULE'),
   ('pyimod04_pywin32',
-   'D:\\Intense_RP_API_v1.1\\build\\Intense_RP_API\\localpycs\\pyimod04_pywin32.pyc',
+   'D:\\Intense_RP_API_v1.2\\build\\Intense_RP_API\\localpycs\\pyimod04_pywin32.pyc',
    'PYMODULE'),
   ('pyiboot01_bootstrap',
    'C:\\Users\\Omega '
@@ -49,11 +49,11 @@
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
    'PYSOURCE'),
-  ('Intense_RP_API', 'D:\\Intense_RP_API_v1.1\\Intense_RP_API.py', 'PYSOURCE'),
-  ('python311.dll', 'C:\\Program Files\\Python311\\python311.dll', 'BINARY'),
+  ('Intense_RP_API', 'D:\\Intense_RP_API_v1.2\\Intense_RP_API.py', 'PYSOURCE'),
   ('VCRUNTIME140.dll',
    'C:\\Program Files\\Python311\\VCRUNTIME140.dll',
    'BINARY'),
+  ('python311.dll', 'C:\\Program Files\\Python311\\python311.dll', 'BINARY'),
   ('select.pyd', 'C:\\Program Files\\Python311\\DLLs\\select.pyd', 'EXTENSION'),
   ('_hashlib.pyd',
    'C:\\Program Files\\Python311\\DLLs\\_hashlib.pyd',
@@ -85,6 +85,14 @@
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\markupsafe\\_speedups.cp311-win_amd64.pyd',
    'EXTENSION'),
+  ('cryptography\\hazmat\\bindings\\_rust.pyd',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd',
+   'EXTENSION'),
+  ('_cffi_backend.cp311-win_amd64.pyd',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\_cffi_backend.cp311-win_amd64.pyd',
+   'EXTENSION'),
   ('_overlapped.pyd',
    'C:\\Program Files\\Python311\\DLLs\\_overlapped.pyd',
    'EXTENSION'),
@@ -100,36 +108,29 @@
   ('libffi-8.dll',
    'C:\\Program Files\\Python311\\DLLs\\libffi-8.dll',
    'BINARY'),
+  ('python3.dll', 'C:\\Program Files\\Python311\\python3.dll', 'BINARY'),
   ('base_library.zip',
-   'D:\\Intense_RP_API_v1.1\\build\\Intense_RP_API\\base_library.zip',
+   'D:\\Intense_RP_API_v1.2\\build\\Intense_RP_API\\base_library.zip',
    'DATA'),
-  ('selenium\\py.typed',
+  ('selenium\\webdriver\\remote\\isDisplayed.js',
    'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\py.typed',
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\remote\\isDisplayed.js',
    'DATA'),
-  ('selenium\\webdriver\\common\\macos\\selenium-manager',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\macos\\selenium-manager',
+  ('importlib_metadata-6.8.0.dist-info\\WHEEL',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\importlib_metadata-6.8.0.dist-info\\WHEEL',
    'DATA'),
   ('selenium\\webdriver\\common\\mutation-listener.js',
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\mutation-listener.js',
    'DATA'),
-  ('certifi\\cacert.pem',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem',
+  ('cryptography-41.0.3.dist-info\\RECORD',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\cryptography-41.0.3.dist-info\\RECORD',
    'DATA'),
-  ('selenium\\webdriver\\firefox\\webdriver_prefs.json',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\firefox\\webdriver_prefs.json',
-   'DATA'),
-  ('certifi\\py.typed',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\py.typed',
-   'DATA'),
-  ('selenium\\webdriver\\common\\devtools\\v113\\py.typed',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\devtools\\v113\\py.typed',
+  ('cryptography-41.0.3.dist-info\\top_level.txt',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\cryptography-41.0.3.dist-info\\top_level.txt',
    'DATA'),
   ('selenium\\webdriver\\common\\devtools\\v114\\py.typed',
    'C:\\Users\\Omega '
@@ -139,34 +140,98 @@
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\windows\\selenium-manager.exe',
    'DATA'),
-  ('selenium\\webdriver\\common\\linux\\selenium-manager',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\linux\\selenium-manager',
-   'DATA'),
-  ('selenium\\webdriver\\remote\\isDisplayed.js',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\remote\\isDisplayed.js',
-   'DATA'),
-  ('selenium\\webdriver\\common\\devtools\\v85\\py.typed',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\devtools\\v85\\py.typed',
+  ('cryptography-41.0.3.dist-info\\LICENSE.BSD',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\cryptography-41.0.3.dist-info\\LICENSE.BSD',
    'DATA'),
   ('selenium\\webdriver\\remote\\findElements.js',
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\remote\\findElements.js',
    'DATA'),
+  ('importlib_metadata-6.8.0.dist-info\\INSTALLER',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\importlib_metadata-6.8.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('importlib_metadata-6.8.0.dist-info\\METADATA',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\importlib_metadata-6.8.0.dist-info\\METADATA',
+   'DATA'),
+  ('importlib_metadata-6.8.0.dist-info\\top_level.txt',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\importlib_metadata-6.8.0.dist-info\\top_level.txt',
+   'DATA'),
+  ('importlib_metadata-6.8.0.dist-info\\RECORD',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\importlib_metadata-6.8.0.dist-info\\RECORD',
+   'DATA'),
+  ('selenium\\webdriver\\common\\linux\\selenium-manager',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\linux\\selenium-manager',
+   'DATA'),
+  ('certifi\\py.typed',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\py.typed',
+   'DATA'),
+  ('cryptography-41.0.3.dist-info\\WHEEL',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\cryptography-41.0.3.dist-info\\WHEEL',
+   'DATA'),
+  ('importlib_metadata-6.8.0.dist-info\\LICENSE',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\importlib_metadata-6.8.0.dist-info\\LICENSE',
+   'DATA'),
+  ('selenium\\webdriver\\common\\macos\\selenium-manager',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\macos\\selenium-manager',
+   'DATA'),
+  ('cryptography-41.0.3.dist-info\\LICENSE.APACHE',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\cryptography-41.0.3.dist-info\\LICENSE.APACHE',
+   'DATA'),
+  ('selenium\\webdriver\\common\\devtools\\v113\\py.typed',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\devtools\\v113\\py.typed',
+   'DATA'),
+  ('selenium\\py.typed',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\py.typed',
+   'DATA'),
+  ('selenium\\webdriver\\common\\devtools\\v85\\py.typed',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\devtools\\v85\\py.typed',
+   'DATA'),
   ('selenium\\webdriver\\remote\\getAttribute.js',
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\remote\\getAttribute.js',
    'DATA'),
+  ('cryptography-41.0.3.dist-info\\INSTALLER',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\cryptography-41.0.3.dist-info\\INSTALLER',
+   'DATA'),
+  ('cryptography-41.0.3.dist-info\\LICENSE',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\cryptography-41.0.3.dist-info\\LICENSE',
+   'DATA'),
+  ('certifi\\cacert.pem',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem',
+   'DATA'),
+  ('cryptography-41.0.3.dist-info\\METADATA',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\cryptography-41.0.3.dist-info\\METADATA',
+   'DATA'),
   ('selenium\\webdriver\\common\\devtools\\v115\\py.typed',
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\devtools\\v115\\py.typed',
+   'DATA'),
+  ('selenium\\webdriver\\firefox\\webdriver_prefs.json',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\firefox\\webdriver_prefs.json',
    'DATA')],
  [],
  False,
  False,
- 1692712525,
+ 1693347640,
  [('run.exe',
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run.exe',

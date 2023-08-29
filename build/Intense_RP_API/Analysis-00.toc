@@ -1,7 +1,11 @@
-(['D:\\Intense_RP_API_v1.1\\Intense_RP_API.py'],
- ['D:\\Intense_RP_API_v1.1'],
+(['D:\\Intense_RP_API_v1.2\\Intense_RP_API.py'],
+ ['D:\\Intense_RP_API_v1.2'],
  ['codecs'],
  ['C:\\Users\\Omega '
+  'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\playwright\\_impl\\__pyinstaller',
+  'C:\\Users\\Omega '
+  'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\numpy\\_pyinstaller',
+  'C:\\Users\\Omega '
   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\_pyinstaller_hooks_contrib\\hooks\\stdhooks',
   'C:\\Users\\Omega '
   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\_pyinstaller_hooks_contrib\\hooks\\stdhooks\\__pycache__',
@@ -34,7 +38,7 @@
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
    'PYSOURCE'),
-  ('Intense_RP_API', 'D:\\Intense_RP_API_v1.1\\Intense_RP_API.py', 'PYSOURCE')],
+  ('Intense_RP_API', 'D:\\Intense_RP_API_v1.2\\Intense_RP_API.py', 'PYSOURCE')],
  [('multiprocessing.popen_forkserver',
    'C:\\Program Files\\Python311\\Lib\\multiprocessing\\popen_forkserver.py',
    'PYMODULE'),
@@ -343,6 +347,13 @@
   ('multiprocessing',
    'C:\\Program Files\\Python311\\Lib\\multiprocessing\\__init__.py',
    'PYMODULE'),
+  ('stringprep',
+   'C:\\Program Files\\Python311\\Lib\\stringprep.py',
+   'PYMODULE'),
+  ('_py_abc', 'C:\\Program Files\\Python311\\Lib\\_py_abc.py', 'PYMODULE'),
+  ('tracemalloc',
+   'C:\\Program Files\\Python311\\Lib\\tracemalloc.py',
+   'PYMODULE'),
   ('getpass', 'C:\\Program Files\\Python311\\Lib\\getpass.py', 'PYMODULE'),
   ('nturl2path',
    'C:\\Program Files\\Python311\\Lib\\nturl2path.py',
@@ -353,13 +364,6 @@
   ('mimetypes', 'C:\\Program Files\\Python311\\Lib\\mimetypes.py', 'PYMODULE'),
   ('http.cookiejar',
    'C:\\Program Files\\Python311\\Lib\\http\\cookiejar.py',
-   'PYMODULE'),
-  ('stringprep',
-   'C:\\Program Files\\Python311\\Lib\\stringprep.py',
-   'PYMODULE'),
-  ('_py_abc', 'C:\\Program Files\\Python311\\Lib\\_py_abc.py', 'PYMODULE'),
-  ('tracemalloc',
-   'C:\\Program Files\\Python311\\Lib\\tracemalloc.py',
    'PYMODULE'),
   ('json', 'C:\\Program Files\\Python311\\Lib\\json\\__init__.py', 'PYMODULE'),
   ('json.encoder',
@@ -508,6 +512,10 @@
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\contrib\\__init__.py',
    'PYMODULE'),
+  ('urllib3.contrib._appengine_environ',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\contrib\\_appengine_environ.py',
+   'PYMODULE'),
   ('urllib3.util.url',
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\util\\url.py',
@@ -535,18 +543,6 @@
   ('urllib3.util.retry',
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\util\\retry.py',
-   'PYMODULE'),
-  ('urllib3.response',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\response.py',
-   'PYMODULE'),
-  ('urllib3._collections',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\_collections.py',
-   'PYMODULE'),
-  ('urllib3._base_connection',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\_base_connection.py',
    'PYMODULE'),
   ('urllib3.util.response',
    'C:\\Users\\Omega '
@@ -584,9 +580,13 @@
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\idna\\package_data.py',
    'PYMODULE'),
-  ('urllib3.util.util',
+  ('urllib3.packages.six',
    'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\util\\util.py',
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\packages\\six.py',
+   'PYMODULE'),
+  ('urllib3.packages',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\packages\\__init__.py',
    'PYMODULE'),
   ('urllib3.poolmanager',
    'C:\\Users\\Omega '
@@ -596,9 +596,9 @@
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\util\\proxy.py',
    'PYMODULE'),
-  ('urllib3._request_methods',
+  ('urllib3.request',
    'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\_request_methods.py',
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\request.py',
    'PYMODULE'),
   ('urllib3.filepost',
    'C:\\Users\\Omega '
@@ -608,13 +608,33 @@
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\fields.py',
    'PYMODULE'),
+  ('urllib3._collections',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\_collections.py',
+   'PYMODULE'),
   ('urllib3.connectionpool',
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\connectionpool.py',
    'PYMODULE'),
+  ('urllib3.packages.backports.weakref_finalize',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\packages\\backports\\weakref_finalize.py',
+   'PYMODULE'),
+  ('urllib3.packages.backports',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\packages\\backports\\__init__.py',
+   'PYMODULE'),
   ('urllib3.util.ssl_match_hostname',
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\util\\ssl_match_hostname.py',
+   'PYMODULE'),
+  ('urllib3.util.queue',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\util\\queue.py',
+   'PYMODULE'),
+  ('urllib3.response',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\urllib3\\response.py',
    'PYMODULE'),
   ('urllib3.connection',
    'C:\\Users\\Omega '
@@ -743,6 +763,10 @@
   ('selenium.webdriver.common.timeouts',
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\timeouts.py',
+   'PYMODULE'),
+  ('typing_extensions',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\typing_extensions.py',
    'PYMODULE'),
   ('selenium.webdriver.common.print_page_options',
    'C:\\Users\\Omega '
@@ -1113,9 +1137,225 @@
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\middleware\\__init__.py',
    'PYMODULE'),
+  ('cryptography.hazmat.primitives.serialization',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.serialization.ssh',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\ssh.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers.modes',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\modes.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives._cipheralgorithm',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\_cipheralgorithm.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers.algorithms',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\algorithms.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers.base',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\base.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.backend',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\backends\\openssl\\backend.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.serialization.pkcs12',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\pkcs12.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.types',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\types.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.x25519',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x25519.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.x448',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\x448.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.ed448',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed448.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.dh',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dh.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives._asymmetric',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\_asymmetric.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.bindings.openssl.binding',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\binding.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.bindings.openssl._conditional',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\_conditional.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.bindings.openssl',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.bindings',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\bindings\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.rsa',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\backends\\openssl\\rsa.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.utils',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\backends\\openssl\\utils.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.ec',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ec.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.cmac',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\backends\\openssl\\cmac.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.constant_time',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\constant_time.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.aead',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\backends\\openssl\\aead.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.ciphers.aead',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\ciphers\\aead.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\backends\\openssl\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.ciphers',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\backends\\openssl\\ciphers.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.utils',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\utils.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.padding',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\padding.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.ed25519',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed25519.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.ec',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ec.py',
+   'PYMODULE'),
+  ('cryptography.hazmat._oid',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\_oid.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.dsa',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\dsa.py',
+   'PYMODULE'),
+  ('cryptography.exceptions',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\exceptions.py',
+   'PYMODULE'),
+  ('cryptography.utils',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\utils.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.serialization.base',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\base.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives._serialization',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\_serialization.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.hashes',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\hashes.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\backends\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.x509.oid',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\x509\\oid.py',
+   'PYMODULE'),
+  ('cryptography',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.backends.openssl.decode_asn1',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\backends\\openssl\\decode_asn1.py',
+   'PYMODULE'),
+  ('cryptography.__about__',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\__about__.py',
+   'PYMODULE'),
   ('werkzeug.debug.tbtools',
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\debug\\tbtools.py',
+   'PYMODULE'),
+  ('cryptography.x509',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\x509\\__init__.py',
+   'PYMODULE'),
+  ('cryptography.x509.name',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\x509\\name.py',
+   'PYMODULE'),
+  ('cryptography.x509.general_name',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\x509\\general_name.py',
+   'PYMODULE'),
+  ('cryptography.x509.extensions',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\x509\\extensions.py',
+   'PYMODULE'),
+  ('cryptography.x509.base',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\x509\\base.py',
+   'PYMODULE'),
+  ('cryptography.x509.certificate_transparency',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\x509\\certificate_transparency.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.rsa',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\rsa.py',
    'PYMODULE'),
   ('http.server',
    'C:\\Program Files\\Python311\\Lib\\http\\server.py',
@@ -1499,6 +1739,54 @@
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\click\\decorators.py',
    'PYMODULE'),
+  ('importlib_metadata',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\importlib_metadata\\__init__.py',
+   'PYMODULE'),
+  ('importlib_metadata._itertools',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\importlib_metadata\\_itertools.py',
+   'PYMODULE'),
+  ('importlib_metadata._functools',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\importlib_metadata\\_functools.py',
+   'PYMODULE'),
+  ('importlib_metadata._compat',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\importlib_metadata\\_compat.py',
+   'PYMODULE'),
+  ('importlib_metadata._collections',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\importlib_metadata\\_collections.py',
+   'PYMODULE'),
+  ('importlib_metadata._py39compat',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\importlib_metadata\\_py39compat.py',
+   'PYMODULE'),
+  ('importlib_metadata._meta',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\importlib_metadata\\_meta.py',
+   'PYMODULE'),
+  ('importlib_metadata._adapters',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\importlib_metadata\\_adapters.py',
+   'PYMODULE'),
+  ('importlib_metadata._text',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\importlib_metadata\\_text.py',
+   'PYMODULE'),
+  ('zipp',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\zipp\\__init__.py',
+   'PYMODULE'),
+  ('zipp.glob',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\zipp\\glob.py',
+   'PYMODULE'),
+  ('zipp.py310compat',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\zipp\\py310compat.py',
+   'PYMODULE'),
   ('click.shell_completion',
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\click\\shell_completion.py',
@@ -1574,10 +1862,10 @@
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\json\\__init__.py',
    'PYMODULE')],
- [('python311.dll', 'C:\\Program Files\\Python311\\python311.dll', 'BINARY'),
-  ('VCRUNTIME140.dll',
+ [('VCRUNTIME140.dll',
    'C:\\Program Files\\Python311\\VCRUNTIME140.dll',
    'BINARY'),
+  ('python311.dll', 'C:\\Program Files\\Python311\\python311.dll', 'BINARY'),
   ('select.pyd', 'C:\\Program Files\\Python311\\DLLs\\select.pyd', 'EXTENSION'),
   ('_hashlib.pyd',
    'C:\\Program Files\\Python311\\DLLs\\_hashlib.pyd',
@@ -1609,6 +1897,14 @@
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\markupsafe\\_speedups.cp311-win_amd64.pyd',
    'EXTENSION'),
+  ('cryptography\\hazmat\\bindings\\_rust.pyd',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd',
+   'EXTENSION'),
+  ('_cffi_backend.cp311-win_amd64.pyd',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\_cffi_backend.cp311-win_amd64.pyd',
+   'EXTENSION'),
   ('_overlapped.pyd',
    'C:\\Program Files\\Python311\\DLLs\\_overlapped.pyd',
    'EXTENSION'),
@@ -1623,39 +1919,32 @@
    'BINARY'),
   ('libffi-8.dll',
    'C:\\Program Files\\Python311\\DLLs\\libffi-8.dll',
-   'BINARY')],
+   'BINARY'),
+  ('python3.dll', 'C:\\Program Files\\Python311\\python3.dll', 'BINARY')],
  [],
  [],
  [('base_library.zip',
-   'D:\\Intense_RP_API_v1.1\\build\\Intense_RP_API\\base_library.zip',
+   'D:\\Intense_RP_API_v1.2\\build\\Intense_RP_API\\base_library.zip',
    'DATA'),
-  ('selenium\\py.typed',
+  ('selenium\\webdriver\\remote\\isDisplayed.js',
    'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\py.typed',
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\remote\\isDisplayed.js',
    'DATA'),
-  ('selenium\\webdriver\\common\\macos\\selenium-manager',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\macos\\selenium-manager',
+  ('importlib_metadata-6.8.0.dist-info\\WHEEL',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\importlib_metadata-6.8.0.dist-info\\WHEEL',
    'DATA'),
   ('selenium\\webdriver\\common\\mutation-listener.js',
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\mutation-listener.js',
    'DATA'),
-  ('certifi\\cacert.pem',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem',
+  ('cryptography-41.0.3.dist-info\\RECORD',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\cryptography-41.0.3.dist-info\\RECORD',
    'DATA'),
-  ('selenium\\webdriver\\firefox\\webdriver_prefs.json',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\firefox\\webdriver_prefs.json',
-   'DATA'),
-  ('certifi\\py.typed',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\py.typed',
-   'DATA'),
-  ('selenium\\webdriver\\common\\devtools\\v113\\py.typed',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\devtools\\v113\\py.typed',
+  ('cryptography-41.0.3.dist-info\\top_level.txt',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\cryptography-41.0.3.dist-info\\top_level.txt',
    'DATA'),
   ('selenium\\webdriver\\common\\devtools\\v114\\py.typed',
    'C:\\Users\\Omega '
@@ -1665,28 +1954,92 @@
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\windows\\selenium-manager.exe',
    'DATA'),
-  ('selenium\\webdriver\\common\\linux\\selenium-manager',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\linux\\selenium-manager',
-   'DATA'),
-  ('selenium\\webdriver\\remote\\isDisplayed.js',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\remote\\isDisplayed.js',
-   'DATA'),
-  ('selenium\\webdriver\\common\\devtools\\v85\\py.typed',
-   'C:\\Users\\Omega '
-   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\devtools\\v85\\py.typed',
+  ('cryptography-41.0.3.dist-info\\LICENSE.BSD',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\cryptography-41.0.3.dist-info\\LICENSE.BSD',
    'DATA'),
   ('selenium\\webdriver\\remote\\findElements.js',
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\remote\\findElements.js',
    'DATA'),
+  ('importlib_metadata-6.8.0.dist-info\\INSTALLER',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\importlib_metadata-6.8.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('importlib_metadata-6.8.0.dist-info\\METADATA',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\importlib_metadata-6.8.0.dist-info\\METADATA',
+   'DATA'),
+  ('importlib_metadata-6.8.0.dist-info\\top_level.txt',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\importlib_metadata-6.8.0.dist-info\\top_level.txt',
+   'DATA'),
+  ('importlib_metadata-6.8.0.dist-info\\RECORD',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\importlib_metadata-6.8.0.dist-info\\RECORD',
+   'DATA'),
+  ('selenium\\webdriver\\common\\linux\\selenium-manager',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\linux\\selenium-manager',
+   'DATA'),
+  ('certifi\\py.typed',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\py.typed',
+   'DATA'),
+  ('cryptography-41.0.3.dist-info\\WHEEL',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\cryptography-41.0.3.dist-info\\WHEEL',
+   'DATA'),
+  ('importlib_metadata-6.8.0.dist-info\\LICENSE',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\importlib_metadata-6.8.0.dist-info\\LICENSE',
+   'DATA'),
+  ('selenium\\webdriver\\common\\macos\\selenium-manager',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\macos\\selenium-manager',
+   'DATA'),
+  ('cryptography-41.0.3.dist-info\\LICENSE.APACHE',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\cryptography-41.0.3.dist-info\\LICENSE.APACHE',
+   'DATA'),
+  ('selenium\\webdriver\\common\\devtools\\v113\\py.typed',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\devtools\\v113\\py.typed',
+   'DATA'),
+  ('selenium\\py.typed',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\py.typed',
+   'DATA'),
+  ('selenium\\webdriver\\common\\devtools\\v85\\py.typed',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\devtools\\v85\\py.typed',
+   'DATA'),
   ('selenium\\webdriver\\remote\\getAttribute.js',
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\remote\\getAttribute.js',
    'DATA'),
+  ('cryptography-41.0.3.dist-info\\INSTALLER',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\cryptography-41.0.3.dist-info\\INSTALLER',
+   'DATA'),
+  ('cryptography-41.0.3.dist-info\\LICENSE',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\cryptography-41.0.3.dist-info\\LICENSE',
+   'DATA'),
+  ('certifi\\cacert.pem',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\certifi\\cacert.pem',
+   'DATA'),
+  ('cryptography-41.0.3.dist-info\\METADATA',
+   'c:\\users\\omega '
+   'slender\\appdata\\roaming\\python\\python311\\site-packages\\cryptography-41.0.3.dist-info\\METADATA',
+   'DATA'),
   ('selenium\\webdriver\\common\\devtools\\v115\\py.typed',
    'C:\\Users\\Omega '
    'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\common\\devtools\\v115\\py.typed',
+   'DATA'),
+  ('selenium\\webdriver\\firefox\\webdriver_prefs.json',
+   'C:\\Users\\Omega '
+   'Slender\\AppData\\Roaming\\Python\\Python311\\site-packages\\selenium\\webdriver\\firefox\\webdriver_prefs.json',
    'DATA')],
  [])

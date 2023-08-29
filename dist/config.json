@@ -1,5 +1,8 @@
 {
     "browser": "edge",
     "cookie": "Your cookie code.",
-    "reset_context": true
+    "reset_context": true,
+    "separate_message": false,
+    "chat_txt": false,
+    "url_bot": "https://poe.com/ChatGPT"
 }
