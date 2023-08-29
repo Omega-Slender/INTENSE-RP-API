@@ -6,6 +6,7 @@
 **Code based on the work of 4e4f4148:** [ITSNOTPOEVER-ST](https://github.com/4e4f4148/ITSNOTPOEVER-ST)
 
 **JSON system requested by the community and inspired by:** [Poe-API-Server project]([https://github.com/4e4f4148/ITSNOTPOEVER-ST](https://github.com/vfnm/Poe-API-Server))
+
 ---
 
 **⚠️ Warning:**
