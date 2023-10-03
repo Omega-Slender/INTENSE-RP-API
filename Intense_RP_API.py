@@ -88,7 +88,7 @@ if browser.lower() == "firefox":
     driver.get(url_bot)
 
 # Datos para conectarse a la API.
-@app.route('/v2/driver/sage/models', methods=['GET'])
+@app.route('/models', methods=['GET'])
 def sage_models():
     data = [
         {
@@ -144,7 +144,7 @@ def sage_models():
     return jsonify({"object": "list", "data": data})
 
 # Recibir información para que POE pueda dar respuesta.
-@app.route('/v2/driver/sage/chat/completions', methods=['POST'])
+@app.route('/chat/completions', methods=['POST'])
 def sagedriver_completion():
     # Cargar los datos JSON de la solicitud externa de PUT.
     put_data = json.loads(request.get_data(as_text=True))
@@ -193,8 +193,8 @@ def sagedriver_completion():
         userName = 'User:'
 
     # Reemplazar "assistant" y  "user" por unas variables.
-    Character_Info = Character_Info.replace("assistant:", characterName)
-    Character_Info = Character_Info.replace("user:", userName)
+    Character_Info = Character_Info.replace("assistant:", characterName + ":")
+    Character_Info = Character_Info.replace("user:", userName + ":")
 
     if chat_txt:
         # Crear y escribir el archivo temporal
@@ -214,8 +214,8 @@ def sagedriver_completion():
     # Presionar botón para reiniciar contexto.
     if reset_context:
         try:
-            # Buscar y presionar botón.
-            reset = driver.find_element(By.CLASS_NAME, "ChatMessageInputFooter_chatBreakButton__hqJ3v")
+            # Buscar y presionar botón con parte fija del nombre de clase.
+            reset = driver.find_element(By.CSS_SELECTOR, '[class*="ChatMessageInputFooter_chatBreakButton"]')
             reset.click()
             
             # Avisar que el proceso terminó.
@@ -229,7 +229,7 @@ def sagedriver_completion():
     
     try:
         # Agregar caja de texto en una variable.
-        text_area = driver.find_element(By.CLASS_NAME, "GrowingTextArea_textArea__eadlu")
+        text_area = driver.find_element(By.CSS_SELECTOR, '[class*="GrowingTextArea_textArea"]')
         
         if chat_txt:
             # Pegar texto.
@@ -237,7 +237,7 @@ def sagedriver_completion():
             text_area.send_keys(" ")
             
             # Subir txt a la página.
-            text_input = driver.find_element(By.CLASS_NAME, "ChatMessageFileInputButton_input__szx6_")
+            text_input = driver.find_element(By.CSS_SELECTOR, '[class*="ChatMessageFileInputButton_input"]')
             text_input.send_keys(os.path.abspath(temp_file_path))
             time.sleep(0.5)
             print("- " + Fore.GREEN + Style.BRIGHT + "Message sent.")
@@ -267,20 +267,21 @@ def sagedriver_completion():
 
     if chat_txt:
         # Pegar texto.
-        text_area = driver.find_element(By.CLASS_NAME, "GrowingTextArea_textArea__eadlu")
+        text_area = driver.find_element(By.CSS_SELECTOR, '[class*="GrowingTextArea_textArea"]')
         driver.execute_script("arguments[0].value = arguments[1];", text_area, "Message to continue")
         text_area.send_keys(".")
         
     elif separate_message:
         # Ejecutar script para pegar "Character_Info2".
-        text_area = driver.find_element(By.CLASS_NAME, "GrowingTextArea_textArea__eadlu")
+        text_area = driver.find_element(By.CSS_SELECTOR, '[class*="GrowingTextArea_textArea"]')
         driver.execute_script("arguments[0].value = arguments[1];", text_area, Character_Info2)
         text_area.send_keys(" ")    
 
         # Revisar en bucle si el botón de enviar está disponible.
         while True:
             try:
-                send_button = driver.find_element(By.CLASS_NAME, "ChatMessageSendButton_sendButton__OMyK1")
+                # Utilizar un selector CSS con parte fija en la clase.
+                send_button = driver.find_element(By.CSS_SELECTOR, '[class*="ChatMessageSendButton_sendButton"]')
                 if send_button.get_attribute("disabled") == "true":   
                     time.sleep(0.2) 
                 else:
@@ -295,20 +296,21 @@ def sagedriver_completion():
     
         # Esperar 2.5 segundos para poder enviar el texto.
         time.sleep(2.5)
-        text_area = driver.find_element(By.CLASS_NAME, "GrowingTextArea_textArea__eadlu")
+        text_area = driver.find_element(By.CSS_SELECTOR, '[class*="GrowingTextArea_textArea"]')
         driver.execute_script("arguments[0].value = arguments[1];", text_area, "Message to continue")
         text_area.send_keys(".")
         
     else:
         # Pegar texto.
-        text_area = driver.find_element(By.CLASS_NAME, "GrowingTextArea_textArea__eadlu")
+        text_area = driver.find_element(By.CSS_SELECTOR, '[class*="GrowingTextArea_textArea"]')
         driver.execute_script("arguments[0].value = arguments[1];", text_area, "Message to continue")
         text_area.send_keys(".")
 
     # Revisar en bucle si el botón de enviar está disponible.
     while True:
         try:
-            send_button = driver.find_element(By.CLASS_NAME, "ChatMessageSendButton_sendButton__OMyK1")
+            # Utilizar un selector CSS con parte fija en la clase.
+            send_button = driver.find_element(By.CSS_SELECTOR, '[class*="ChatMessageSendButton_sendButton"]')
             if send_button.get_attribute("disabled") == "true":   
                 time.sleep(0.2) 
             else:
@@ -321,23 +323,22 @@ def sagedriver_completion():
         os.remove(temp_file_path)
 
     # Obtener el contenido de la última respuesta.
-    div = driver.find_elements(By.CSS_SELECTOR, "div.Markdown_markdownContainer__UyYrv")[-1]
+    div = driver.find_elements(By.CSS_SELECTOR, '[class*="Markdown_markdownContainer"]')[-1]
     content = div.get_attribute('outerHTML')
     ResponsePoe = content
     time.sleep(0.1)
     
     # Limpiar contenido de la respuesta y avisar que terminó el proceso.
+    ResponsePoe = re.sub('<div class="Markdown_markdownContainer__.*">', '', ResponsePoe)
     ResponsePoe = ResponsePoe.replace('<em>', '*').replace('</em>', '*')
-    ResponsePoe = ResponsePoe.replace('<br>', '').replace('</br>', '').replace('<p>', '').replace('</p>', '').replace('<a node="\\\[object Object\\\]" class="MarkdownLink_linkifiedLink__KxC9G">', '').replace('</a>', '').replace('<code node="\\\[object Object\\\]">', '').replace('</code>', '').replace('<div class="Markdown_markdownContainer__UyYrv">', '').replace('</div>', '')
-    ResponsePoe = re.sub(r'^[^\n]+:', '', ResponsePoe, flags=re.MULTILINE).strip()
+    ResponsePoe = ResponsePoe.replace('<br>', '').replace('</br>', '').replace('<p>', '').replace('</p>', '').replace('</a>', '').replace('<code node="\\\[object Object\\\]">', '').replace('</code>', '').replace('</div>', '')
 
     # Detectar si existe botón de bloqueo.
     try:
-        last_markdown_container = driver.find_elements(By.CLASS_NAME, "Markdown_markdownContainer__UyYrv")[-1]
+        last_markdown_container = driver.find_elements(By.CSS_SELECTOR, '[class*="Markdown_markdownContainer"]')[-1]
         bot_message = last_markdown_container.find_element(By.XPATH, ".//following::div[contains(@class, 'Message_botMessageBubble__CPGMI') and contains(@class, 'Message_widerMessage__SmSLi')]")
         print("- " + Fore.RED + Style.BRIGHT + "A problem was detected.")
         ResponsePoe = "There was a problem with POE."
-        # Continuar con el código aquí después de encontrar el mensaje del bot.
     except NoSuchElementException:
         print("- " + Fore.GREEN + Style.BRIGHT + "Response cleaned.")
     
@@ -388,15 +389,15 @@ if __name__ == '__main__':
     local_ip = socket.gethostbyname(socket.gethostname())
     time.sleep(0.2)
     
-    print(Fore.CYAN + Style.BRIGHT + "WELCOME TO INTENSE RP API V1.2")
+    print(Fore.CYAN + Style.BRIGHT + "WELCOME TO INTENSE RP API V1.3")
     time.sleep(0.2)
 
     print(Fore.GREEN + Style.BRIGHT + "Links to connect SillyTavern with the API:")
     time.sleep(0.2)
     
-    print(Fore.YELLOW + Style.BRIGHT + f"URL 1: {Fore.WHITE}http://127.0.0.1:5000/v2/driver/sage")
+    print(Fore.YELLOW + Style.BRIGHT + f"URL 1: {Fore.WHITE}http://127.0.0.1:5000/")
     time.sleep(0.2)
     
-    print(Fore.YELLOW + Style.BRIGHT + f"URL 2: {Fore.WHITE}http://{local_ip}:5000/v2/driver/sage")  
+    print(Fore.YELLOW + Style.BRIGHT + f"URL 2: {Fore.WHITE}http://{local_ip}:5000/")  
     time.sleep(0.2)
     app.run(host='0.0.0.0', port=5000)
